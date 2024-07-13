@@ -1,0 +1,730 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <title>Travel Bussiness</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+<style>
+:root{
+    --pink:#e84393;
+}
+*{
+    margin:0;padding:0;
+    box-sizing: border-box;
+    font-family:verdana,geneva,tahoma,sans-serif;
+    outline:none;border:none;
+    text-decoration:none;
+    text-transform:capitalize;
+    transtion:.2s linear;
+}
+html{
+    font-size:62.5%;
+    scroll-behaviour:smooth;
+    scroll-padding-top:6rem;
+    overflow-x:hidden;
+}
+section{
+    padding:2rem 9%;
+}
+.heading{
+    text-align:centre;
+    font-size:4rem;
+    color:#333;
+    padding:1rem;
+    margin:2rem 0;
+    background:rgba(255,51,153,.05);
+}
+.heading span{
+    color var(--pink);
+}
+.btn{
+    display:inline-block;
+    margin-top:1rem;
+    border-radius:5rem;
+    background:#333;
+    color:#fff;
+    padding:1rem 3.5rem;
+    cursor:pointer;
+    font-size:1.7rem;
+}
+.btn:hover{
+    background:var(--pink);
+}
+header{
+    position:fixed;
+    top:0;left:0;right:0;
+    background:#fff;
+    display:flex;
+    align-items:centre;
+    justify-content:space-between;
+    z-index:1000;
+    box-shadow:0. 5rem 1rem rgba(0,0,0.1);
+}
+header .logo{
+    font-size:3rem;
+    color:#333;
+    font-weight:bolder;
+}
+header .logo span{
+    color:var(--pink);
+}
+header .navbar a{
+    font-size:2rem;
+    padding:0 1.5rem;
+    color:#666;
+}
+header .navbar a:hover{
+    color:var(--pink);
+}
+header .icons a{
+    font-size:2.5rem;
+    color:#333;
+    margin-left:1.5rem;
+}
+header .icons a:hover{
+    color:var(--pink);
+}
+header #toggler{
+    display:none;
+}
+header .fa-bars{
+    font-size:3rem;
+    color:#333;
+    border-radius:.5rem;
+    padding:.5rem 1.5rem;
+    cursor:pointer;
+    border:.1rem solid rgba(0,0,0,.3);
+    display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+    html{
+    font-size:55%;
+    
+}
+header{
+    padding:2rem;
+}
+section{
+    padding:2rem;
+}
+.home{
+    background-position:left;
+}
+}
+@media(max-width:768px){
+    header .fa-bars{
+        display:block;
+    }
+    header.navbar{
+        position:absolute;
+        top:100;left:0;right:0;
+        background:#eee;
+        border-top:1rem solid rgba(0,0,0,.1);
+        clip-path:polygon(0 0,100% 0,100% 0,0 0);
+    }
+    header #toggler:checked~ .navbar{
+      clip-path:polygon(0 0,100% 0,100% 0,0 0);
+      
+    }
+    header.navbar a{
+        margin:1.5rem;
+        padding:1.5rem;
+        background:#fff;
+        border:1rem solid rgba(0,0,0,.1);
+        display:block;
+    }
+    .home .content h3{
+        font-size:5rem;
+    }
+    .home .content span{
+        font-size:2.5rem;
+    }
+}
+@media(max-width:450px){
+    html{
+    font-size:55%;
+    
+}
+.heading{
+    font-size:3rem;
+}
+header{
+    padding:2rem;
+}
+}
+.home{
+    display:flex;
+    align-item:centre;
+    min-height:100vh;
+    background:url('https://images.idgesg.net/images/article/2018/02/best_places_smart_cities_world_globe_thinkstock_469235498-100749511-large.jpg')no-repeat;
+    background-size:cover;
+    background-position:centre;
+}
+.home .content{
+    max-width:50rem;
+}
+.home .content h3{
+    font-size:6rem;
+    color:#333;
+}
+.home .content span{
+    font-size:3.5rem;
+    color:var(--pink);
+    padding:1rem 0;
+    line-height:1.5;
+}
+.home .content p{
+    font-size:1.5rem;
+    color:#999;
+    padding:1rem 0;
+    line-height:1.5;
+}
+.about .row{
+    display:flex;
+    align-items:centre;
+    gap:2rem;
+    flex-wrap:wrap;
+    padding:2rem 0;
+    padding-bottom:3rem;
+}
+.about .row .image-container{
+    flex:1 1 40rem;
+    position:relative;
+}
+.about .row .image-container image{
+    width:100%;
+    border:1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+.about .row .image-container h3{
+    position:absolute;
+    top:50%; transform:translateY(-50%);
+    font-size:3rem;
+    background:#fff;
+    width:100%;
+    padding:1rem 2rem;
+    text-align:centre;
+    mix-blend-mode:screen;
+}
+.about .row .content{
+    flex:1 1 40rem;
+}
+.about .row .content h3{
+    font-size:3rem;
+    color:#333;
+}
+.about .row .content p{
+    font-size:1.5rem;
+    color:#999;
+    padding:5rem 0;
+    padding-top:1rem;
+    line-height:1.5;
+}
+.services .box-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+}
+.services .box-container .box{
+    flex:1 1 30rem;
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius:5rem solid rgba(0,0,0,.1);
+    position:relative;
+}
+.services .box-container .box .discount{
+    position:absolute;
+    top:1rem;left:1rem;
+    padding:.2rem 1rem;
+    font-size:1rem;
+    color:var(--pink);
+    background:rgba(255,51,153,.05);
+    z-index:1;
+    border-radius:.5rem;
+}
+.services .box-container .box .image{
+    position:relative;
+    text-align:centre;
+    paddind-top:2rem;
+    overflow:hidden;
+}
+.services .box-container .box .image .img{
+    height:25rem;
+}
+.services .box-container .box:hover .image .img{
+    transform:scale(1.1);
+}
+.services .box-container .box .image .icons{
+     position:relative;
+     bottom:-7rem; left:0; right:0;
+     display:10;
+}
+.services .box-container .box:hover .image .icons{
+    bottom:0;
+
+}
+.services .box-container .box .content{
+    padding:2rem;
+    text-align:centre;
+}
+.services .box-container .box .content h3{
+    font-size:2.5rem;
+    color:#333;
+}
+.services .box-container .box .content .price{
+    font-size:2.5rem;
+    color:var(--pink);
+    font-weight:bolder;
+    padding-top:1rem;
+}
+.services .box-container .box .content .price span{
+    font-size:1.5rem;
+    color:#999;
+    font-weight:lighter;
+    text-decoration:line-through;
+}
+
+.services .box-container .box .image .icons{
+     position:relative;
+     bottom:-7rem; left:0; right:0;
+     display:0;
+     }
+
+.services .box-container .box .image .icons a{
+    height:5rem;
+    line-height:5rem;
+    font-size:4rem;
+    width:50%;
+    background:var(--pink);
+    color:#fff;
+}
+.services .box-container .box .image .icons .Book-btn{
+    border-left:.2rem solid #fff7;
+    border-right:.2rem solid #fff7;
+    width:100%;
+}
+.services .box-container .box .image .icons a:hover{
+    background:#333;
+}
+.services .box-container .box .content{
+    padding:2rem;
+    text-align:centre;
+}
+.services .box-container .box .content h3{
+    font-size:2.5rem;
+    color:#333;
+}
+.services .box-container .box .content .price{
+    font-size:2.5rem;
+    color:var(--pink);
+    font-weight:bolder;
+    padding-top:1rem;
+}
+.services .box-container .box .content .price span{
+    font-size:1.5rem;
+    color:#999;
+    font-weight:lighter;
+    text-decoration:line-through;
+}
+.review .box-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.5rem;
+} 
+.review .box-container .box{
+    flex:1 1 30rem;
+    box-shadow:0 .5rem rgba(0,0,0,.1);
+    border-radius:.5rem;
+    padding:3rem 2rem;
+    position:relative;
+}
+.review .box-container .box .fa-qoute-right{
+    position:absolute;
+    bottom:3rem; right:3rem;
+    font-size:6rem;
+    color:#eee;
+}
+.review .box-container .box .stars i{
+    color:var(--pink);
+    font-size:2rem;
+}
+.review .box-container .box p{
+    color:#999;
+    font-size:1.5rem;
+    line-height:1.5;
+    padding-top:2rem;
+}
+.review .box-container .box .user{
+    display:flex;
+    align-items:centre;
+    padding-top:2rem;
+}
+.review .box-container .box .user img{
+    height:6rem;
+    width:6rem;
+    border-radius:50%;
+    object-fit:cover;
+    margin-right:1rem;
+    
+}
+.review .box-container .box .user h3{
+    font-size:2rem;
+    color:#333;
+}
+.review .box-container .box .user span{
+    font-size:1.5rem;
+    color:#999;
+}
+.contact .row{
+    display:flex;
+    flex-wrap:wrap-reverse;
+    gap:1.5rem;
+    align-text:right;
+}
+.contact .row form{
+    flex:1 1 40rem;
+    padding:2rem 2.5rem;
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    border:1rem solid rgba(0,0,0,.1);
+    background:#fff;
+    border-radius:5rem;
+}
+.contact .row .image{
+    flex:1 1 40rem;
+    
+}
+.contact .row .image img{
+   width:100%;
+   
+}
+.contact .row form .box{
+    padding:1rem;
+    font-size:1.7rem;
+    color:#333;
+    text-tranform:none;
+    border:1rem solid rgba(0,0,0,.1);
+    border-radius:.5rem;
+    margin:.7rem 0;
+    width:100%;
+}
+.contact .row form .box:focus{
+    border-color:var(--pink);
+}
+.contact .row form textarea{
+    height:15rem;
+    resize:none;
+}
+footer .box-container{
+display:flex;
+flex-wrap:wrap;
+gap:1.5rem;
+}
+.footer .box-container .box{
+flex:1 1 25rem;
+}
+.footer .box-container h3{
+color: #666;
+font-size: 1.5rem;
+padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+}
+.footer .box-container .box img{
+    margin-top:1rem;
+}
+
+</style>
+<header>
+<input type="checkbox" name="" id="toggler">
+<label for="toggler" class="fas fa-bars"></label>
+<a herf="#" class="logo">Agency<span>.</span></a>
+<nav class="navbar">
+<a href="#home">home</a>
+<a href="#About">About</a>
+<a href="#services">services</a>
+<a href="#review">review</a>
+<a href="#contact">contact</a>
+</nav>
+
+<div class="icons">
+<a href="#" class="fas fa-heart"></a>
+<a href="#" class="fas fa-rating"></a>
+<a href="#" class="fas fa-user"></a>
+</div>
+</header>
+
+<section class="home" id="home">
+<div class="content">
+
+<h3>bussiness orders<h3>
+<span>worth travelling </span> 
+<p>Operating a travel business allows you to be your own boss, set your own hours and make independent decisions. </p>
+<a href="#" class="btn">Book now</a>
+</div>
+</section>
+   <section class="about" id="about">
+   <h1 class="heading"><span>About</span>Us</h1>
+   <div class="row">
+   <div class="image-container">
+   <image src="https://tse3.mm.bing.net/th?id=OIP.74gc7dOMx3RMwETRnbxwXAHaHa&pid=Api&P=0&h=180" height="100%" width="100%"></image>
+   <h3>Tour packages</h3>
+   </div>
+   <div class="content">
+   <h3>why this ?</h3>
+   <p>This Travel Company that Offers Comprehensive Solutions for All the Business And Leisure Travelers Across the World. Deals in: Travel Agents, Travel Agencies, Tour Packages, Tour Operators</p>
+   <a href="#" class="btn">learn more</a>
+   </div>
+   </section>
+
+   <section class="services" id="services">
+   <h1 class="heading"> Recent<span>Bookings</span></h1>
+   <div class="box-container">
+   <div class="box">
+   <span class="discount">-25%</span>
+   <div class="image">
+   <img src="https://tse2.mm.bing.net/th?id=OIP.lIWZ1T6SwHI72xZY-pkN-QHaEK&pid=Api&P=0&h=180" alt="">
+   <div class="icons">
+   
+   <a href="#" class="Book-btn"> Book now</a>
+   
+   </div>
+   </div>
+   <div class="content">
+   <h3>Normal Rooms</h3> 
+   <div class="price">800<span>1,000</span></div>
+   </div>
+   </div>
+
+   <div class="box">
+   <span class="discount">-25%</span>
+   <div class="image">
+   <img src="https://tse4.mm.bing.net/th?id=OIP.0evRXrhPxRcle5GRppKO7AHaEH&pid=Api&P=0&h=180" alt="">
+   <div class="icons">
+   
+   <a href="#" class="Book-btn"> Book now</a>
+   
+   </div>
+   </div>
+   <div class="content">
+   <h3>Normal Rooms</h3> 
+   <div class="price">800<span>1,000</span></div>
+   </div>
+   </div>
+
+   <div class="box">
+   <span class="discount">-15%</span>
+   <div class="image">
+   <img src="https://tse2.mm.bing.net/th?id=OIP.dHT4TLaXhvZ9Z2ccrIAa2AHaEK&pid=Api&P=0&h=180" alt="">
+   <div class="icons">
+   
+   <a href="#" class="Book-btn"> Book now</a>
+   
+   </div>
+   </div>
+   <div class="content">
+   <h3>Medium rooms</h3> 
+   <div class="price">1,500<span>2,000</span></div>
+   </div>
+   </div>
+
+   <div class="box">
+   <span class="discount">-15%</span>
+   <div class="image">
+   <img src="https://tse3.mm.bing.net/th?id=OIP.ogfA38SIoEoaqf4mRJy-YAHaEH&pid=Api&P=0&h=180" alt="">
+   <div class="icons">
+   
+   <a href="#" class="Book-btn"> Book now</a>
+   
+   </div>
+   </div>
+   <div class="content">
+   <h3>Medium Rooms</h3> 
+   <div class="price">1,500<span> 2,000</span></div>
+   </div>
+   </div>
+
+   <div class="box">
+   <span class="discount">-15%</span>
+   <div class="image">
+   <img src="https://tse4.mm.bing.net/th?id=OIP.NdiviXJ8N7suoAuaWDeLZwHaEK&pid=Api&P=0&h=180" alt="">
+   <div class="icons">
+   
+   <a href="#" class="Book-btn"> Book now</a>
+   
+   </div>
+   </div>
+   <div class="content">
+   <h3>Premium Rooms</h3> 
+   <div class="price">3,000<span> 6,000</span></div>
+   </div>
+   </div>
+
+   <div class="box">
+   <span class="discount">-15%</span>
+   <div class="image">
+   <img src="https://tse2.mm.bing.net/th?id=OIP.gnkOY62p_rKBCt1CZ9vbAAHaEK&pid=Api&P=0&h=180" alt="">
+   <div class="icons">
+   
+   <a href="#" class="Book-btn"> Book now</a>
+   
+   </div>
+   </div>
+   <div class="content">
+   <h3>Premium Rooms</h3> 
+   <div class="price">3,000<span> 6,000</span></div>
+   </div>
+   </div>
+   </section>
+   
+    <section class="review" id="review">
+           <h1 class="heading"> customer's <span>review</span></h1>
+           <div class="box-conta">
+           <div class="box">
+           <div class="stars">
+          
+           <i style='font-size:24px' class='fas'>&#xf406;</i>
+           <img src="https://i.pinimg.com/originals/a4/4f/83/a44f8321abec496fa27de1a46cfee54c.jpg" height="260px" width="260px" >
+           
+           <h3>jiya</h3>
+           <span>it was good</span>
+           </div>
+           </div>
+           <span class="fas fa-qoute-left"></span>
+           </div>
+           </div>
+           <div class="box-conta">
+           <div class="box">
+           <div class="stars"
+           <ul>
+            ★
+            ★
+            ★
+            ★
+            
+           </ul>
+           </div>
+           <p>Well maintained and care taker was good. rooms where good and food was ok its worth foe money foe how much we may normal rooms where ok and premium where extrodinary .</p>
+           <div class="user">
+           <i style='font-size:24px' class='fas'>&#xf406;</i>
+           <img src="https://th.bing.com/th/id/OIP.mEma0ZcipymPAHIYoIuFiAHaJa?w=186&h=236&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+           
+           <h3>don</h3>
+           <span>it was good</span>
+           </div>
+           </div>
+           <span class="fas fa-qoute-right"></span>
+           </div>
+           </div>
+            <div class="box-conta">
+           <div class="box">
+           <div class="stars"
+           <ul>
+            ★
+             ★
+              ★
+               ★
+                ★
+           </ul>
+           </div>
+           <p>Well maintained and care taker was good. rooms where good and food was ok its worth foe money foe how much we may normal rooms where ok and premium where extrodinary .</p>
+           </section>
+        
+           <section class="contact" id="contact">
+           <h1 class="heading"> <span>contact </span>us</h1>
+           <div class="row" >
+           <form action="">
+           <input type="text" placeholder="name" class="box">
+           <input type="email" placeholder="email" class="box">
+           <input type="number" placeholder="number" class="box">
+           <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+           <input type="submit" value="send message" class="btn">
+        
+           <div class="image">
+           <img   src="https://www.wallpaperflare.com/static/189/104/965/earth-world-tour-illustration-wallpaper.jpg" alt="" >
+           </form>
+           </div>
+           </div>
+           
+           <section class="footer">
+           <div class="box-container">
+           
+           <div class="box">
+           <h3>quick links</h3>
+           <a href="#">home</a>
+            <a href="#">about</a>
+             <a href="#">services</a>
+              <a href="#">review</a>
+               <a href="#">contact </a>
+               </div>
+               
+                <div class="box">
+           <h3>locations</h3>
+           <a href="#">India</a>
+            <a href="#">Africa</a>
+             <a href="#">USA</a>
+              <a href="#">Germany</a>
+               <a href="#">Switzerland </a>
+               </div>
+               
+               <div class="box">
+           <h3>contact-info</h3>
+           <a href="#">379-279-30082</a>
+            <a href="#">2993-2932-234</a>
+             <a href="#">23459****</a>
+              <a href="#">her@gmail.com</a>
+              <div class ="image">
+             
+               <img src="https://tse1.mm.bing.net/th?id=OIP.vIbGLzH7JblWZl7jj3zycwHaF6&pid=Api&P=0&h=180" 
+                             alt="credit/debit card image"> 
+               </div>
+               </div>
+               </div>
+           </section>
+   
+
+</body>
+</html>
